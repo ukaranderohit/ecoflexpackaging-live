@@ -1,182 +1,713 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EcoFlex Packaging</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoFlex Packaging | Eco-Friendly Packaging Solutions</title>
+  <meta name="description" content="EcoFlex Packaging offers eco-friendly packaging solutions including non-woven bags, paper bags, and custom printing services." />
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2e7d32;
+      --primary-dark: #1b5e20;
+      --primary-soft: #e8f5e9;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --white: #ffffff;
+      --border: rgba(255,255,255,0.18);
+      --shadow: 0 12px 35px rgba(0,0,0,0.12);
+      --radius: 18px;
+      --max-width: 1180px;
+    }
 
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-body {
-    background: #f5fff7;
-    color: #333;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-/* HERO SECTION */
-.hero {
-    height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-                url('https://images.unsplash.com/photo-1604187351574-c75ca79f5807');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: var(--text);
+      background: #f7fbf8;
+      line-height: 1.6;
+    }
 
-.hero h1 {
-    font-size: 50px;
-    margin-bottom: 10px;
-}
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
-.hero p {
-    font-size: 20px;
-    margin-bottom: 20px;
-}
+    a {
+      text-decoration: none;
+    }
 
-.btn {
-    padding: 12px 30px;
-    background: #2e7d32;
-    color: white;
-    border-radius: 30px;
-    text-decoration: none;
-    transition: 0.3s;
-}
+    .container {
+      width: min(var(--max-width), 92%);
+      margin: auto;
+    }
 
-.btn:hover {
-    background: #1b5e20;
-}
+    /* Header */
+    .site-header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+      padding: 18px 0;
+    }
 
-/* SERVICES */
-.services {
-    padding: 60px 20px;
-    text-align: center;
-}
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
 
-.services h2 {
-    margin-bottom: 30px;
-    color: #2e7d32;
-}
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--white);
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
 
-.cards {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
+    .brand img {
+      width: 58px;
+	  height: 58px;
+	  object-fit: contain;
+	  border-radius: 14px;
+	  background: #ffffff;
+	  padding: 8px;
+	  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+    }
 
-.card {
-    background: white;
-    padding: 25px;
-    width: 250px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    transition: 0.3s;
-}
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
 
-.card:hover {
-    transform: translateY(-10px);
-}
+    .nav-links a {
+      color: rgba(255,255,255,0.92);
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: 0.3s ease;
+    }
 
-/* ABOUT */
-.about {
-    padding: 60px 20px;
-    background: #e8f5e9;
-    text-align: center;
-}
+    .nav-links a:hover {
+      color: #d4f5d6;
+    }
 
-/* CONTACT */
-.contact {
-    padding: 50px;
-    text-align: center;
-}
+    .nav-cta {
+	  padding: 11px 20px;
+	  border-radius: 999px;
+	  background: linear-gradient(135deg, #2e7d32, #4caf50);
+	  color: white;
+	  font-weight: 600;
+	  box-shadow: 0 10px 25px rgba(46,125,50,0.35);
+	  transition: all 0.3s ease;
+	}
 
-/* WHATSAPP BUTTON */
-.whatsapp {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25D366;
-    color: white;
-    padding: 15px 18px;
-    border-radius: 50%;
-    font-size: 22px;
-    text-decoration: none;
-}
+	.nav-cta:hover {
+	  background: linear-gradient(135deg, #1b5e20, #2e7d32);
+	  transform: translateY(-2px);
+	}
 
-/* FOOTER */
-footer {
-    background: #1b5e20;
-    color: white;
-    text-align: center;
-    padding: 15px;
-}
-</style>
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(rgba(8, 28, 12, 0.58), rgba(8, 28, 12, 0.58)),
+        url('https://images.unsplash.com/photo-1604187351574-c75ca79f5807?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      color: var(--white);
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(247,251,248,1) 0%, rgba(247,251,248,0) 16%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 42px;
+      align-items: center;
+      padding-top: 90px;
+      padding-bottom: 70px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 14px;
+      background: rgba(255,255,255,0.14);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      backdrop-filter: blur(8px);
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.3rem, 5vw, 4.3rem);
+      line-height: 1.08;
+      font-weight: 800;
+      margin-bottom: 16px;
+      max-width: 720px;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.9);
+      max-width: 650px;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 26px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 24px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.96rem;
+      transition: 0.3s ease;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: var(--white);
+      box-shadow: 0 12px 28px rgba(46, 125, 50, 0.35);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.12);
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,0.22);
+      backdrop-filter: blur(8px);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.18);
+    }
+
+    .hero-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-highlights span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.16);
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.95);
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 24px;
+      padding: 28px;
+      backdrop-filter: blur(14px);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+
+    .hero-card p {
+      margin-bottom: 18px;
+      color: rgba(255,255,255,0.88);
+      font-size: 0.96rem;
+    }
+
+    .hero-card ul {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+
+    .hero-card li {
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.09);
+      border: 1px solid rgba(255,255,255,0.12);
+      font-size: 0.95rem;
+    }
+
+    /* Sections */
+    section {
+      padding: 90px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 14px;
+      color: var(--primary-dark);
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 700;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: var(--muted);
+      max-width: 760px;
+      margin: 0 auto 50px;
+    }
+
+    /* Services */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .service-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 30px 24px;
+      box-shadow: 0 10px 30px rgba(16, 24, 40, 0.06);
+      border: 1px solid rgba(46, 125, 50, 0.08);
+      transition: 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 18px 40px rgba(16, 24, 40, 0.12);
+    }
+
+    .service-icon {
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      border-radius: 16px;
+      background: var(--primary-soft);
+      color: var(--primary-dark);
+      font-size: 1.5rem;
+      margin-bottom: 18px;
+    }
+
+    .service-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: var(--primary-dark);
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    /* About */
+    .about {
+      background: linear-gradient(180deg, #eef8ef 0%, #f8fcf8 100%);
+    }
+
+    .about-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .about-panel {
+      background: var(--white);
+      border-radius: 22px;
+      padding: 34px;
+      box-shadow: 0 10px 30px rgba(16, 24, 40, 0.06);
+    }
+
+    .about-panel h3 {
+      color: var(--primary-dark);
+      margin-bottom: 14px;
+      font-size: 1.35rem;
+    }
+
+    .about-panel p {
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .about-list {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .about-list li {
+      background: #f7fbf8;
+      border: 1px solid rgba(46,125,50,0.08);
+      padding: 14px 16px;
+      border-radius: 14px;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    /* Contact */
+    .contact-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .contact-card {
+      background: var(--white);
+      border-radius: 22px;
+      padding: 32px;
+      box-shadow: 0 10px 30px rgba(16, 24, 40, 0.06);
+    }
+
+    .contact-card h3 {
+      color: var(--primary-dark);
+      margin-bottom: 14px;
+      font-size: 1.3rem;
+    }
+
+    .contact-card p {
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .contact-item {
+      padding: 15px 16px;
+      border-radius: 14px;
+      background: #f8fbf8;
+      border: 1px solid rgba(46,125,50,0.08);
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .contact-item a {
+      color: var(--text);
+    }
+
+    .contact-item a:hover {
+      color: var(--primary);
+    }
+
+    /* Footer */
+    footer {
+      background: #103915;
+      color: rgba(255,255,255,0.88);
+      padding: 26px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+	.brand span,
+    .footer-brand {
+      color: #ffffff;
+	  font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+
+    .footer-brand img {
+      width: 42px;
+	  height: 42px;
+	  object-fit: contain;
+	  border-radius: 12px;
+	  background: #ffffff;
+	  padding: 6px;
+	  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+    }
+
+    /* WhatsApp */
+    .whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #25d366;
+      color: var(--white);
+      font-size: 1.5rem;
+      box-shadow: 0 12px 28px rgba(37, 211, 102, 0.35);
+      z-index: 50;
+      transition: 0.3s ease;
+    }
+
+    .whatsapp:hover {
+      transform: translateY(-3px) scale(1.03);
+    }
+
+    /* Responsive */
+    @media (max-width: 980px) {
+      .hero-inner,
+      .services-grid,
+      .about-box,
+      .contact-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        max-width: 620px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .site-header {
+        padding: 14px 0;
+      }
+
+      .brand img {
+        width: 46px;
+        height: 46px;
+      }
+
+      .hero {
+        text-align: left;
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero p {
+        font-size: 0.98rem;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .section-subtitle {
+        margin-bottom: 34px;
+      }
+
+      .about-panel,
+      .contact-card,
+      .service-card {
+        padding: 24px 20px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<section class="hero">
-    <div>
-        <h1>🌿 EcoFlex Packaging</h1>
-        <p>Eco-Friendly Packaging Solutions for Modern Businesses</p>
-        <a href="https://wa.me/918530981185" class="btn">Contact Us</a>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#" class="brand">
+        <img src="logo.png" alt="EcoFlex Packaging Logo">
+        <span>EcoFlex Packaging</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="https://wa.me/918530981185" class="nav-cta">Get Quote</a>
+      </nav>
     </div>
-</section>
+  </header>
 
-<!-- SERVICES -->
-<section class="services">
-    <h2>Our Services</h2>
-    <div class="cards">
-        <div class="card">
-            <h3>Non-Woven Bags</h3>
-            <p>High-quality eco-friendly printed bags for businesses.</p>
+  <section class="hero">
+    <div class="container hero-inner">
+      <div>
+        <span class="eyebrow">Eco-Friendly Packaging Partner</span>
+        <h1>Smart, Sustainable Packaging for Modern Businesses</h1>
+        <p>
+          EcoFlex Packaging delivers high-quality non-woven bags, paper bags, and custom printed packaging solutions designed to strengthen your brand with a greener impact.
+        </p>
+
+        <div class="hero-actions">
+          <a href="https://wa.me/918530981185" class="btn btn-primary">Contact on WhatsApp</a>
+          <a href="#services" class="btn btn-secondary">Explore Services</a>
         </div>
-        <div class="card">
-            <h3>Paper Bags</h3>
-            <p>Durable and recyclable paper bag solutions.</p>
+
+        <div class="hero-highlights">
+          <span>🌿 Eco-conscious solutions</span>
+          <span>🛍 Custom printing</span>
+          <span>📦 Bulk order support</span>
         </div>
-        <div class="card">
-            <h3>Custom Printing</h3>
-            <p>Customized branding with premium print quality.</p>
-        </div>
+      </div>
+
+      <div class="hero-card">
+        <h3>What We Offer</h3>
+        <p>Reliable packaging solutions tailored for retailers, wholesalers, and growing businesses.</p>
+        <ul>
+          <li>Non-Woven Bag Printing</li>
+          <li>Paper Bag Solutions</li>
+          <li>Custom Branding & Printing</li>
+          <li>Bulk Supply Support</li>
+        </ul>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- ABOUT -->
-<section class="about">
-    <h2>About Us</h2>
-    <p>
-        EcoFlex Packaging is committed to providing sustainable packaging solutions.
-        We help businesses grow with eco-friendly and cost-effective packaging products.
-    </p>
-</section>
+  <section id="services">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-subtitle">
+        We combine premium quality, eco-conscious materials, and clean branding support to help businesses build a stronger packaging identity.
+      </p>
 
-<!-- CONTACT -->
-<section class="contact">
-    <h2>Contact Us</h2>
-    <p>📞 +91-8530981185</p>
-    <p>📧 ecoflexpackaging.in@gmail.com</p>
-</section>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🛍</div>
+          <h3>Non-Woven Bags</h3>
+          <p>Reusable, durable, and brand-friendly non-woven bags designed for retail, events, and bulk business requirements.</p>
+        </div>
 
-<!-- WHATSAPP -->
-<a href="https://wa.me/918530981185" class="whatsapp">💬</a>
+        <div class="service-card">
+          <div class="service-icon">📄</div>
+          <h3>Paper Bags</h3>
+          <p>Stylish and eco-friendly paper bag solutions ideal for stores, gifting, food businesses, and promotional packaging.</p>
+        </div>
 
-<!-- FOOTER -->
-<footer>
-    © 2026 EcoFlex Packaging | All Rights Reserved
-</footer>
+        <div class="service-card">
+          <div class="service-icon">🎨</div>
+          <h3>Custom Printing</h3>
+          <p>Professional logo printing and packaging customization that helps your brand stand out with a polished look.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container">
+      <h2 class="section-title">About EcoFlex Packaging</h2>
+      <p class="section-subtitle">
+        We are committed to helping businesses move toward practical, attractive, and sustainable packaging solutions.
+      </p>
+
+      <div class="about-box">
+        <div class="about-panel">
+          <h3>Who We Are</h3>
+          <p>
+            EcoFlex Packaging is focused on delivering eco-friendly packaging products with reliable quality, customization support, and customer-first service.
+          </p>
+          <p>
+            Our goal is to support modern businesses with packaging that is both functional and brand-enhancing.
+          </p>
+        </div>
+
+        <div class="about-panel">
+          <h3>Why Businesses Choose Us</h3>
+          <ul class="about-list">
+            <li>High-quality eco-friendly packaging</li>
+            <li>Professional custom printing support</li>
+            <li>Reliable service for bulk requirements</li>
+            <li>Clean, modern brand presentation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <p class="section-subtitle">
+        Ready to discuss your packaging needs? Connect with us directly for orders, custom printing, and business inquiries.
+      </p>
+
+      <div class="contact-wrap">
+        <div class="contact-card">
+          <h3>Let’s Connect</h3>
+          <p>We are available to support your packaging requirements and custom order discussions.</p>
+          <div class="contact-list">
+            <div class="contact-item">📞 <a href="tel:+918530981185">+91 8530981185</a></div>
+            <div class="contact-item">📧 <a href="mailto:info@ecoflexpackaging.in">info@ecoflexpackaging.in</a></div>
+            <div class="contact-item">💬 <a href="https://wa.me/918530981185" target="_blank">Chat on WhatsApp</a></div>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <h3>Business Focus</h3>
+          <p>We currently support businesses looking for reliable and eco-conscious packaging options.</p>
+          <div class="contact-list">
+            <div class="contact-item">✔ Non-Woven Bags</div>
+            <div class="contact-item">✔ Paper Bags</div>
+            <div class="contact-item">✔ Custom Printed Packaging</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <a href="https://wa.me/918530981185" class="whatsapp" target="_blank" aria-label="Chat on WhatsApp">💬</a>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="logo.png" alt="EcoFlex Logo">
+        <span>EcoFlex Packaging</span>
+      </div>
+      <div>© 2026 EcoFlex Packaging. Eco-Friendly Packaging Solutions.</div>
+    </div>
+  </footer>
 
 </body>
 </html>
