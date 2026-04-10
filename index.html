@@ -1,743 +1,954 @@
 <!DOCTYPE html>
-<html lang="en-IN">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EcoFlex Packaging | Non-Woven Bags, Paper Bags & Custom Packaging</title>
-  <meta name="description" content="EcoFlex Packaging provides non-woven bags, paper bags, custom bag printing, and eco-friendly packaging solutions for shops, retailers, and businesses in India." />
-  <meta name="robots" content="index, follow, max-image-preview:large" />
-  <meta name="author" content="EcoFlex Packaging" />
-  <meta name="keywords" content="EcoFlex Packaging, non-woven bags, paper bags, custom bag printing, eco-friendly packaging, carry bags, packaging solutions India" />
-  <link rel="canonical" href="https://ecoflexpackaging.in/" />
-  <link rel="icon" type="image/png" href="logo.png" />
-  <meta property="og:locale" content="en_IN" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="EcoFlex Packaging" />
-  <meta property="og:title" content="EcoFlex Packaging | Non-Woven Bags, Paper Bags & Custom Packaging" />
-  <meta property="og:description" content="Eco-friendly non-woven bags, paper bags, and custom packaging solutions for businesses." />
-  <meta property="og:url" content="https://ecoflexpackaging.in/" />
-  <meta property="og:image" content="https://ecoflexpackaging.in/logo.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="EcoFlex Packaging | Non-Woven Bags, Paper Bags & Custom Packaging" />
-  <meta name="twitter:description" content="Eco-friendly non-woven bags, paper bags, and custom packaging solutions for businesses." />
-  <meta name="twitter:image" content="https://ecoflexpackaging.in/logo.png" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "EcoFlex Packaging",
-    "url": "https://ecoflexpackaging.in/",
-    "logo": "https://ecoflexpackaging.in/logo.png",
-    "description": "EcoFlex Packaging provides non-woven bags, paper bags, custom bag printing, and eco-friendly packaging solutions.",
-    "email": "info@ecoflexpackaging.in",
-    "telephone": "+91-8530981185",
-    "sameAs": [
-      "https://wa.me/918530981185"
-    ]
-  }
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
+  <title>The local shop</title>
   <style>
     :root {
-      --primary: #2e7d32;
-      --primary-dark: #1b5e20;
-      --primary-soft: #e8f5e9;
-      --text: #1f2937;
-      --muted: #6b7280;
-      --white: #ffffff;
-      --border: rgba(255,255,255,0.18);
-      --shadow: 0 12px 35px rgba(0,0,0,0.12);
-      --radius: 18px;
-      --max-width: 1180px;
+      --bg: #f7f8f4;
+      --surface: #ffffff;
+      --text: #172018;
+      --muted: #5e6a60;
+      --primary: #1f7a45;
+      --primary-dark: #14512d;
+      --accent: #ffd54f;
+      --border: #e5e9e2;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      --radius: 22px;
+      --radius-sm: 14px;
+      --container: 1180px;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
-      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
       color: var(--text);
-      background: #f7fbf8;
-      line-height: 1.6;
+      line-height: 1.5;
     }
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    a {
-      text-decoration: none;
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button, input, textarea {
+      font: inherit;
     }
 
     .container {
-      width: min(var(--max-width), 92%);
-      margin: auto;
+      width: min(100% - 24px, var(--container));
+      margin: 0 auto;
     }
 
-    /* Header */
-    .site-header {
-      position: absolute;
+    .topbar {
+      position: sticky;
       top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 10;
-      padding: 18px 0;
+      z-index: 40;
+      background: rgba(247, 248, 244, 0.88);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
     }
 
     .nav {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
       gap: 12px;
-      color: var(--white);
-      font-weight: 700;
-      font-size: 1.1rem;
+      padding: 14px 0;
     }
 
-    .brand img {
-      width: 58px;
-	  height: 58px;
-	  object-fit: contain;
-	  border-radius: 14px;
-	  background: #ffffff;
-	  padding: 8px;
-	  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+    .brand h1 {
+      margin: 0;
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      line-height: 1.1;
     }
 
-    .nav-links {
+    .brand p {
+      margin: 2px 0 0;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .nav-actions {
       display: flex;
       align-items: center;
-      gap: 24px;
+      gap: 10px;
     }
 
-    .nav-links a {
-      color: rgba(255,255,255,0.92);
-      font-size: 0.95rem;
-      font-weight: 500;
-      transition: 0.3s ease;
+    .nav-link,
+    .btn {
+      border: none;
+      background: var(--primary);
+      color: white;
+      border-radius: 999px;
+      padding: 12px 18px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
     }
 
-    .nav-links a:hover {
-      color: #d4f5d6;
+    .btn:hover,
+    .nav-link:hover {
+      background: var(--primary-dark);
+      transform: translateY(-1px);
     }
 
-    .nav-cta {
-	  padding: 11px 20px;
-	  border-radius: 999px;
-	  background: linear-gradient(135deg, #2e7d32, #4caf50);
-	  color: white;
-	  font-weight: 600;
-	  box-shadow: 0 10px 25px rgba(46,125,50,0.35);
-	  transition: all 0.3s ease;
-	}
+    .btn.secondary {
+      background: white;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
 
-	.nav-cta:hover {
-	  background: linear-gradient(135deg, #1b5e20, #2e7d32);
-	  transform: translateY(-2px);
-	}
+    .btn.secondary:hover {
+      background: #f3f5ef;
+    }
 
-    /* Hero */
     .hero {
-      min-height: 100vh;
-      position: relative;
-      display: flex;
-      align-items: center;
-      background:
-        linear-gradient(rgba(8, 28, 12, 0.58), rgba(8, 28, 12, 0.58)),
-        url('https://images.unsplash.com/photo-1604187351574-c75ca79f5807?auto=format&fit=crop&w=1600&q=80');
-      background-size: cover;
-      background-position: center;
-      color: var(--white);
-      overflow: hidden;
+      padding: 20px 0 28px;
     }
 
-    .hero::after {
+    .hero-wrap {
+      position: relative;
+      min-height: 78vh;
+      display: grid;
+      align-items: end;
+      overflow: hidden;
+      border-radius: 32px;
+      box-shadow: var(--shadow);
+      background: #dbe7d9;
+    }
+
+    .hero-wrap::after {
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(247,251,248,1) 0%, rgba(247,251,248,0) 16%);
-      pointer-events: none;
+      background: linear-gradient(90deg, rgba(0,0,0,0.58) 0%, rgba(0,0,0,0.35) 36%, rgba(0,0,0,0.12) 100%);
+      z-index: 1;
     }
 
-    .hero-inner {
+    .hero-image {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-content {
       position: relative;
       z-index: 2;
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 42px;
-      align-items: center;
-      padding-top: 90px;
-      padding-bottom: 70px;
+      color: white;
+      padding: clamp(22px, 4vw, 52px);
+      max-width: 640px;
     }
 
-    .eyebrow {
+    .hero-kicker {
       display: inline-block;
-      padding: 8px 14px;
+      padding: 8px 12px;
       background: rgba(255,255,255,0.14);
-      border: 1px solid var(--border);
+      border: 1px solid rgba(255,255,255,0.18);
       border-radius: 999px;
-      font-size: 0.85rem;
-      font-weight: 500;
-      backdrop-filter: blur(8px);
-      margin-bottom: 18px;
+      margin-bottom: 14px;
+      font-size: 0.92rem;
     }
 
-    .hero h1 {
-      font-size: clamp(2.3rem, 5vw, 4.3rem);
-      line-height: 1.08;
-      font-weight: 800;
-      margin-bottom: 16px;
-      max-width: 720px;
+    .hero-content h2 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 5vw, 4.3rem);
+      line-height: 1.04;
     }
 
-    .hero p {
-      font-size: 1.05rem;
-      color: rgba(255,255,255,0.9);
-      max-width: 650px;
-      margin-bottom: 28px;
+    .hero-content p {
+      margin: 0 0 20px;
+      font-size: clamp(1rem, 2vw, 1.1rem);
+      color: rgba(255,255,255,0.92);
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 14px;
-      margin-bottom: 26px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 14px 24px;
-      border-radius: 999px;
-      font-weight: 600;
-      font-size: 0.96rem;
-      transition: 0.3s ease;
-    }
-
-    .btn-primary {
-      background: var(--primary);
-      color: var(--white);
-      box-shadow: 0 12px 28px rgba(46, 125, 50, 0.35);
-    }
-
-    .btn-primary:hover {
-      background: var(--primary-dark);
-      transform: translateY(-2px);
-    }
-
-    .btn-secondary {
-      background: rgba(255,255,255,0.12);
-      color: var(--white);
-      border: 1px solid rgba(255,255,255,0.22);
-      backdrop-filter: blur(8px);
-    }
-
-    .btn-secondary:hover {
-      background: rgba(255,255,255,0.18);
-    }
-
-    .hero-highlights {
-      display: flex;
-      flex-wrap: wrap;
       gap: 12px;
     }
 
-    .hero-highlights span {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.16);
-      padding: 10px 14px;
-      border-radius: 999px;
-      font-size: 0.88rem;
-      color: rgba(255,255,255,0.95);
-      backdrop-filter: blur(8px);
-    }
-
-    .hero-card {
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.18);
-      border-radius: 24px;
-      padding: 28px;
-      backdrop-filter: blur(14px);
-      box-shadow: var(--shadow);
-    }
-
-    .hero-card h3 {
-      font-size: 1.3rem;
-      margin-bottom: 10px;
-    }
-
-    .hero-card p {
-      margin-bottom: 18px;
-      color: rgba(255,255,255,0.88);
-      font-size: 0.96rem;
-    }
-
-    .hero-card ul {
-      list-style: none;
-      display: grid;
-      gap: 12px;
-    }
-
-    .hero-card li {
-      padding: 12px 14px;
-      border-radius: 14px;
-      background: rgba(255,255,255,0.09);
-      border: 1px solid rgba(255,255,255,0.12);
-      font-size: 0.95rem;
-    }
-
-    /* Sections */
-    section {
-      padding: 90px 0;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 14px;
-      color: var(--primary-dark);
-      font-size: clamp(1.8rem, 3vw, 2.5rem);
-      font-weight: 700;
-    }
-
-    .section-subtitle {
-      text-align: center;
-      color: var(--muted);
-      max-width: 760px;
-      margin: 0 auto 50px;
-    }
-
-    /* Services */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    .service-card {
-      background: var(--white);
-      border-radius: var(--radius);
-      padding: 30px 24px;
-      box-shadow: 0 10px 30px rgba(16, 24, 40, 0.06);
-      border: 1px solid rgba(46, 125, 50, 0.08);
-      transition: 0.3s ease;
-    }
-
-    .service-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 18px 40px rgba(16, 24, 40, 0.12);
-    }
-
-    .service-icon {
-      width: 58px;
-      height: 58px;
-      display: grid;
-      place-items: center;
-      border-radius: 16px;
-      background: var(--primary-soft);
-      color: var(--primary-dark);
-      font-size: 1.5rem;
-      margin-bottom: 18px;
-    }
-
-    .service-card h3 {
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-      color: var(--primary-dark);
-    }
-
-    .service-card p {
-      color: var(--muted);
-      font-size: 0.96rem;
-    }
-
-    /* About */
-    .about {
-      background: linear-gradient(180deg, #eef8ef 0%, #f8fcf8 100%);
-    }
-
-    .about-box {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 28px;
-      align-items: stretch;
-    }
-
-    .about-panel {
-      background: var(--white);
-      border-radius: 22px;
-      padding: 34px;
-      box-shadow: 0 10px 30px rgba(16, 24, 40, 0.06);
-    }
-
-    .about-panel h3 {
-      color: var(--primary-dark);
-      margin-bottom: 14px;
-      font-size: 1.35rem;
-    }
-
-    .about-panel p {
-      color: var(--muted);
-      margin-bottom: 14px;
-    }
-
-    .about-list {
-      list-style: none;
-      display: grid;
-      gap: 12px;
-      margin-top: 16px;
-    }
-
-    .about-list li {
-      background: #f7fbf8;
-      border: 1px solid rgba(46,125,50,0.08);
-      padding: 14px 16px;
-      border-radius: 14px;
-      color: var(--text);
-      font-weight: 500;
-    }
-
-    /* Contact */
-    .contact-wrap {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-    }
-
-    .contact-card {
-      background: var(--white);
-      border-radius: 22px;
-      padding: 32px;
-      box-shadow: 0 10px 30px rgba(16, 24, 40, 0.06);
-    }
-
-    .contact-card h3 {
-      color: var(--primary-dark);
-      margin-bottom: 14px;
-      font-size: 1.3rem;
-    }
-
-    .contact-card p {
-      color: var(--muted);
-      margin-bottom: 16px;
-    }
-
-    .contact-list {
-      display: grid;
-      gap: 14px;
-    }
-
-    .contact-item {
-      padding: 15px 16px;
-      border-radius: 14px;
-      background: #f8fbf8;
-      border: 1px solid rgba(46,125,50,0.08);
-      color: var(--text);
-      font-weight: 500;
-    }
-
-    .contact-item a {
-      color: var(--text);
-    }
-
-    .contact-item a:hover {
-      color: var(--primary);
-    }
-
-    /* Footer */
-    footer {
-      background: #103915;
-      color: rgba(255,255,255,0.88);
+    .section {
       padding: 26px 0;
     }
 
-    .footer-inner {
+    .section-head {
       display: flex;
-      align-items: center;
+      align-items: end;
       justify-content: space-between;
       gap: 16px;
-      flex-wrap: wrap;
-    }
-	.brand span,
-    .footer-brand {
-      color: #ffffff;
-	  font-weight: 700;
-      letter-spacing: 0.2px;
+      margin-bottom: 16px;
     }
 
-    .footer-brand img {
-      width: 42px;
-	  height: 42px;
-	  object-fit: contain;
-	  border-radius: 12px;
-	  background: #ffffff;
-	  padding: 6px;
-	  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+    .section-head h3 {
+      margin: 0;
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
     }
 
-    /* WhatsApp */
-    .whatsapp {
+    .section-head p {
+      margin: 6px 0 0;
+      color: var(--muted);
+    }
+
+    .carousel-shell {
+      position: relative;
+    }
+
+    .products-track {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: minmax(240px, 84%);
+      gap: 16px;
+      overflow-x: auto;
+      padding: 8px 4px 10px;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+    }
+
+    .products-track::-webkit-scrollbar { display: none; }
+
+    .card {
+      scroll-snap-align: start;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-image {
+      aspect-ratio: 4 / 3;
+      background: #eef2ea;
+      overflow: hidden;
+    }
+
+    .card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .card:hover .card-image img {
+      transform: scale(1.04);
+    }
+
+    .card-body {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
+    }
+
+    .card-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      gap: 10px;
+    }
+
+    .card h4 {
+      margin: 0;
+      font-size: 1.05rem;
+    }
+
+    .price {
+      font-weight: 700;
+      color: var(--primary-dark);
+      white-space: nowrap;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .card .btn {
+      width: 100%;
+      margin-top: auto;
+    }
+
+    .about-order {
+      display: grid;
+      gap: 18px;
+    }
+
+    .info-banner {
+      background: linear-gradient(135deg, #edf8f0, #ffffff);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+    }
+
+    .info-banner strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 1.02rem;
+    }
+
+    .order-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px;
+    }
+
+    form {
+      display: grid;
+      gap: 14px;
+    }
+
+    .field-group {
+      display: grid;
+      gap: 14px;
+    }
+
+    label {
+      display: grid;
+      gap: 8px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border: 1px solid var(--border);
+      background: #fbfcfa;
+      border-radius: 14px;
+      padding: 13px 14px;
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: rgba(31,122,69,0.6);
+      box-shadow: 0 0 0 4px rgba(31,122,69,0.12);
+    }
+
+    textarea { min-height: 96px; resize: vertical; }
+
+    .mini-note {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .cart-fab {
       position: fixed;
-      right: 20px;
-      bottom: 20px;
+      right: 18px;
+      bottom: 86px;
+      z-index: 60;
       width: 58px;
       height: 58px;
       border-radius: 50%;
+      border: none;
+      background: var(--primary);
+      color: white;
+      box-shadow: 0 14px 30px rgba(31, 122, 69, 0.3);
+      cursor: pointer;
+    }
+
+    .cart-badge {
+      position: absolute;
+      top: -3px;
+      right: -1px;
+      min-width: 22px;
+      height: 22px;
+      padding: 0 6px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #111;
+      font-size: 0.78rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid white;
+    }
+
+    .whatsapp-fab {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 60;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #25d366;
+      color: white;
       display: grid;
       place-items: center;
-      background: #25d366;
-      color: var(--white);
-      font-size: 1.5rem;
-      box-shadow: 0 12px 28px rgba(37, 211, 102, 0.35);
-      z-index: 50;
-      transition: 0.3s ease;
+      box-shadow: 0 14px 30px rgba(37, 211, 102, 0.28);
     }
 
-    .whatsapp:hover {
-      transform: translateY(-3px) scale(1.03);
+    .drawer-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+      z-index: 70;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
     }
 
-    /* Responsive */
-    @media (max-width: 980px) {
-      .hero-inner,
-      .services-grid,
-      .about-box,
-      .contact-wrap {
-        grid-template-columns: 1fr;
+    .drawer-backdrop.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .cart-drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: min(420px, 100%);
+      height: 100dvh;
+      background: white;
+      z-index: 80;
+      box-shadow: -20px 0 40px rgba(0,0,0,0.12);
+      transform: translateX(100%);
+      transition: transform 0.28s ease;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+    }
+
+    .cart-drawer.open {
+      transform: translateX(0);
+    }
+
+    .drawer-head,
+    .drawer-foot {
+      padding: 18px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .drawer-foot {
+      border-bottom: none;
+      border-top: 1px solid var(--border);
+      background: #fafbf8;
+    }
+
+    .drawer-title-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .drawer-title-row h4 {
+      margin: 0;
+      font-size: 1.15rem;
+    }
+
+    .icon-btn {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: white;
+      cursor: pointer;
+      font-size: 1.2rem;
+    }
+
+    .cart-items {
+      overflow: auto;
+      padding: 12px 18px 18px;
+      display: grid;
+      gap: 12px;
+      align-content: start;
+    }
+
+    .cart-item {
+      display: grid;
+      grid-template-columns: 72px 1fr auto;
+      gap: 12px;
+      padding: 10px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: #fcfcfb;
+    }
+
+    .cart-thumb {
+      width: 72px;
+      height: 72px;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #eef2ea;
+    }
+
+    .cart-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .cart-item h5 {
+      margin: 0 0 4px;
+      font-size: 0.98rem;
+    }
+
+    .cart-item p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .qty-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 8px;
+      flex-wrap: wrap;
+    }
+
+    .qty-btn,
+    .remove-btn {
+      border: 1px solid var(--border);
+      background: white;
+      border-radius: 10px;
+      padding: 6px 10px;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .remove-btn {
+      color: #b42318;
+      border-color: #f1c9c5;
+      background: #fff7f6;
+    }
+
+    .cart-empty {
+      border: 1px dashed var(--border);
+      border-radius: 18px;
+      padding: 20px;
+      text-align: center;
+      color: var(--muted);
+      background: #fafbf9;
+    }
+
+    .total-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .footer {
+      padding: 14px 0 90px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.92rem;
+    }
+
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: 24px;
+      transform: translateX(-50%) translateY(20px);
+      background: #172018;
+      color: white;
+      padding: 12px 16px;
+      border-radius: 999px;
+      box-shadow: var(--shadow);
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.28s ease;
+      z-index: 100;
+      font-size: 0.94rem;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    @media (min-width: 700px) {
+      .products-track {
+        grid-auto-columns: minmax(260px, 31%);
       }
 
-      .hero-card {
-        max-width: 620px;
+      .field-group {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .about-order {
+        grid-template-columns: 1.1fr 0.9fr;
+        align-items: start;
       }
     }
 
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
+    @media (min-width: 1024px) {
+      .hero-wrap {
+        min-height: 84vh;
       }
 
-      .site-header {
-        padding: 14px 0;
-      }
-
-      .brand img {
-        width: 46px;
-        height: 46px;
-      }
-
-      .hero {
-        text-align: left;
-      }
-
-      .hero h1 {
-        font-size: 2.2rem;
-      }
-
-      .hero p {
-        font-size: 0.98rem;
-      }
-
-      .hero-actions {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .btn {
-        width: 100%;
-      }
-
-      .section-subtitle {
-        margin-bottom: 34px;
-      }
-
-      .about-panel,
-      .contact-card,
-      .service-card {
-        padding: 24px 20px;
-      }
-
-      .footer-inner {
-        flex-direction: column;
-        align-items: flex-start;
+      .products-track {
+        grid-auto-columns: minmax(280px, 24%);
       }
     }
   </style>
 </head>
-
 <body>
-
-  <header class="site-header">
+  <header class="topbar">
     <div class="container nav">
-      <a href="/" class="brand" aria-label="EcoFlex Packaging Home">
-        <img src="logo.png" alt="EcoFlex Packaging Logo">
-        <span>EcoFlex Packaging</span>
-      </a>
-
-      <nav class="nav-links">
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a href="https://wa.me/918530981185" class="nav-cta" target="_blank" rel="noopener">Get Quote</a>
-      </nav>
+      <div class="brand">
+        <h1>The local shop</h1>
+        <p>Fresh Finds, Best Prices</p>
+      </div>
+      <div class="nav-actions">
+        <a class="nav-link" href="#products">Shop Now</a>
+      </div>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="container hero-inner">
-      <div>
-        <span class="eyebrow">Eco-Friendly Packaging Partner</span>
-        <h1>Smart, Sustainable Packaging for Modern Businesses</h1>
-        <p>
-          EcoFlex Packaging delivers high-quality non-woven bags, paper bags, and custom printed packaging solutions designed to strengthen your brand with a greener impact.
-        </p>
-
-        <div class="hero-actions">
-          <a href="https://wa.me/918530981185" class="btn btn-primary" target="_blank" rel="noopener">Contact on WhatsApp</a>
-          <a href="#services" class="btn btn-secondary">Explore Services</a>
-        </div>
-
-        <div class="hero-highlights">
-          <span>🌿 Eco-conscious solutions</span>
-          <span>🛍 Custom printing</span>
-          <span>📦 Bulk order support</span>
-        </div>
-      </div>
-
-      <div class="hero-card">
-        <h3>What We Offer</h3>
-        <p>Reliable packaging solutions tailored for retailers, wholesalers, and growing businesses.</p>
-        <ul>
-          <li>Non-Woven Bag Printing</li>
-          <li>Paper Bag Solutions</li>
-          <li>Custom Branding & Printing</li>
-          <li>Bulk Supply Support</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="services">
-    <div class="container">
-      <h2 class="section-title">Our Services</h2>
-      <p class="section-subtitle">
-        We combine premium quality, eco-conscious materials, and clean branding support to help businesses build a stronger packaging identity.
-      </p>
-
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">🛍</div>
-          <h3>Non-Woven Bags</h3>
-          <p>Reusable, durable, and brand-friendly non-woven bags designed for retail, events, and bulk business requirements.</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">📄</div>
-          <h3>Paper Bags</h3>
-          <p>Stylish and eco-friendly paper bag solutions ideal for stores, gifting, food businesses, and promotional packaging.</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">🎨</div>
-          <h3>Custom Printing</h3>
-          <p>Professional logo printing and packaging customization that helps your brand stand out with a polished look.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="about" class="about">
-    <div class="container">
-      <h2 class="section-title">About EcoFlex Packaging</h2>
-      <p class="section-subtitle">
-        We are committed to helping businesses move toward practical, attractive, and sustainable packaging solutions.
-      </p>
-
-      <div class="about-box">
-        <div class="about-panel">
-          <h3>Who We Are</h3>
-          <p>
-            EcoFlex Packaging is focused on delivering eco-friendly packaging products with reliable quality, customization support, and customer-first service.
-          </p>
-          <p>
-            Our goal is to support modern businesses with packaging that is both functional and brand-enhancing.
-          </p>
-        </div>
-
-        <div class="about-panel">
-          <h3>Why Businesses Choose Us</h3>
-          <ul class="about-list">
-            <li>High-quality eco-friendly packaging</li>
-            <li>Professional custom printing support</li>
-            <li>Reliable service for bulk requirements</li>
-            <li>Clean, modern brand presentation</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="container">
-      <h2 class="section-title">Contact Us</h2>
-      <p class="section-subtitle">
-        Ready to discuss your packaging needs? Connect with us directly for orders, custom printing, and business inquiries.
-      </p>
-
-      <div class="contact-wrap">
-        <div class="contact-card">
-          <h3>Let’s Connect</h3>
-          <p>We are available to support your packaging requirements and custom order discussions.</p>
-          <div class="contact-list">
-            <div class="contact-item">📞 <a href="tel:+918530981185">+91 8530981185</a></div>
-            <div class="contact-item">📧 <a href="mailto:info@ecoflexpackaging.in">info@ecoflexpackaging.in</a></div>
-            <div class="contact-item">💬 <a href="https://wa.me/918530981185" target="_blank">Chat on WhatsApp</a></div>
-          </div>
-        </div>
-
-        <div class="contact-card">
-          <h3>Business Focus</h3>
-          <p>We currently support businesses looking for reliable and eco-conscious packaging options.</p>
-          <div class="contact-list">
-            <div class="contact-item">✔ Non-Woven Bags</div>
-            <div class="contact-item">✔ Paper Bags</div>
-            <div class="contact-item">✔ Custom Printed Packaging</div>
+  <main>
+    <section class="hero container">
+      <div class="hero-wrap">
+        <img class="hero-image" src="https://i.ibb.co/twjWRN8D/heroimage.png" alt="The local shop hero image" />
+        <div class="hero-content">
+          <span class="hero-kicker">Welcome to your neighborhood favorite</span>
+          <h2>Fresh Finds, Best Prices</h2>
+          <p>Discover quality daily essentials, quick picks, and customer favorites in one simple shopping page.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#products">Shop Now</a>
+            <button class="btn secondary" type="button" id="heroCartBtn">View Cart</button>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <a href="https://wa.me/918530981185" class="whatsapp" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
+    <section class="section" id="products">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h3>Featured Products</h3>
+            <p>Browse products and add them directly to your cart.</p>
+          </div>
+        </div>
 
-  <footer>
-    <div class="container footer-inner">
-      <div class="footer-brand" style="display:flex;align-items:center;gap:10px;">
-        <img src="logo.png" alt="EcoFlex Logo">
-        <span>EcoFlex Packaging</span>
+        <div class="carousel-shell">
+          <div class="products-track" id="productsTrack"></div>
+        </div>
       </div>
-      <div>© 2026 EcoFlex Packaging. Eco-Friendly Packaging Solutions.</div>
-    </div>
+    </section>
+
+    <section class="section" id="order-section">
+      <div class="container about-order">
+        <div class="info-banner">
+          <strong>Easy order placement</strong>
+          <p class="mini-note">Customers can add items to the cart, open the cart drawer, and place an order using the integrated form. The site prepares an email with the customer name, phone number, and complete item list addressed to <b>ukaranderohit@gmail.com</b>.</p>
+          <p class="mini-note">This is a pure frontend website. No backend or database is required.</p>
+        </div>
+
+        <div class="order-card">
+          <h3 style="margin-top:0; margin-bottom: 10px;">Place Your Order</h3>
+          <p class="mini-note" style="margin-bottom:14px;">Fill in your details and submit your cart order by email.</p>
+          <form id="checkoutForm">
+            <div class="field-group">
+              <label>
+                Customer Name
+                <input type="text" id="customerName" placeholder="Enter your full name" required />
+              </label>
+              <label>
+                Phone Number
+                <input type="tel" id="customerPhone" placeholder="Enter your phone number" required />
+              </label>
+            </div>
+
+            <label>
+              Delivery Address / Notes
+              <textarea id="customerNotes" placeholder="Optional address or order note"></textarea>
+            </label>
+
+            <button class="btn" type="submit">Send Order Email</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <p>© <span id="year"></span> The local shop · Contact: <a href="mailto:ukaranderohit@gmail.com">ukaranderohit@gmail.com</a></p>
   </footer>
 
+  <button class="cart-fab" id="cartFab" aria-label="Open cart">
+    <span aria-hidden="true">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 4H5L7.4 14.2C7.5 14.7 7.8 15.1 8.2 15.4C8.6 15.7 9.1 15.8 9.6 15.8H18.6C19.1 15.8 19.6 15.7 20 15.4C20.4 15.1 20.7 14.7 20.8 14.2L22 8H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="10" cy="20" r="1.6" fill="currentColor"/>
+        <circle cx="19" cy="20" r="1.6" fill="currentColor"/>
+      </svg>
+    </span>
+    <span class="cart-badge" id="cartCount">0</span>
+  </button>
+
+  <a class="whatsapp-fab" href="https://wa.me/8530981185" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M27.1 4.9A15.1 15.1 0 0 0 16.3 0.5C7.8 0.5 0.9 7.4 0.9 15.9C0.9 18.6 1.6 21.2 2.9 23.5L0.5 31.5L8.8 29.2C11 30.4 13.6 31.1 16.2 31.1H16.3C24.8 31.1 31.7 24.2 31.7 15.7C31.7 11.6 30.1 7.7 27.1 4.9ZM16.3 28.5H16.2C13.9 28.5 11.6 27.9 9.7 26.8L9.2 26.5L4.3 27.9L5.6 23.1L5.3 22.6C4 20.6 3.3 18.3 3.3 15.9C3.3 8.9 9 3.1 16.2 3.1C19.6 3.1 22.8 4.4 25.2 6.8C27.6 9.2 28.9 12.4 28.9 15.8C28.9 22.8 23.2 28.5 16.3 28.5ZM23.3 19C22.9 18.8 21 17.9 20.7 17.8C20.4 17.7 20.1 17.6 19.9 18C19.6 18.4 18.9 19.2 18.7 19.4C18.5 19.6 18.2 19.7 17.8 19.5C15.7 18.4 14.3 17.6 12.8 14.8C12.4 14.1 13.2 14.1 13.8 12.8C13.9 12.6 13.9 12.4 13.8 12.2C13.7 12 13 10.1 12.8 9.6C12.5 8.9 12.2 9 11.9 9C11.6 9 11.3 9 11 9C10.7 9 10.2 9.1 9.8 9.5C9.4 9.9 8.4 10.8 8.4 12.7C8.4 14.6 9.8 16.4 10 16.7C10.2 17 12.8 21 16.8 22.7C19.3 23.8 20.3 23.9 21.1 23.8C22 23.7 23.8 22.9 24.2 21.9C24.6 20.9 24.6 20 24.5 19.8C24.3 19.5 23.8 19.3 23.3 19Z" fill="currentColor"/>
+    </svg>
+  </a>
+
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+    <div class="drawer-head">
+      <div class="drawer-title-row">
+        <h4>Your Cart</h4>
+        <button class="icon-btn" id="closeCartBtn" type="button" aria-label="Close cart">✕</button>
+      </div>
+    </div>
+
+    <div class="cart-items" id="cartItems"></div>
+
+    <div class="drawer-foot">
+      <div class="total-row">
+        <span>Total</span>
+        <span id="cartTotal">₹0</span>
+      </div>
+      <button class="btn" type="button" id="goToCheckoutBtn" style="width:100%;">Proceed to Order Form</button>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast"></div>
+
+  <script>
+    const products = [
+      {
+        id: 1,
+        name: 'Fresh Basket Combo',
+        price: 149,
+        image: 'https://i.ibb.co/nN3yjP1c/photo1.png',
+        description: 'Daily essentials packed fresh for your home.'
+      },
+      {
+        id: 2,
+        name: 'Healthy Grocery Pack',
+        price: 199,
+        image: 'https://i.ibb.co/XxRYTXyy/photo2.png',
+        description: 'A smart mix of kitchen and household staples.'
+      },
+      {
+        id: 3,
+        name: 'Snack Time Favorites',
+        price: 99,
+        image: 'https://i.ibb.co/HLBf0Zds/photo3.png',
+        description: 'Popular picks for quick cravings and tea breaks.'
+      },
+      {
+        id: 4,
+        name: 'Family Value Pack',
+        price: 249,
+        image: 'https://i.ibb.co/5XwTHZYz/photo4.jpg',
+        description: 'Value-packed items chosen for everyday use.'
+      },
+      {
+        id: 5,
+        name: 'Home Care Essentials',
+        price: 179,
+        image: 'https://i.ibb.co/G35TrkVS/photo5.jpg',
+        description: 'Must-have home products in one convenient pack.'
+      },
+      {
+        id: 6,
+        name: 'Quick Buy Special',
+        price: 129,
+        image: 'https://i.ibb.co/21KgGB77/photo6.jpg',
+        description: 'Budget-friendly everyday products for fast shopping.'
+      }
+    ];
+
+    const cart = [];
+
+    const productsTrack = document.getElementById('productsTrack');
+    const cartItemsEl = document.getElementById('cartItems');
+    const cartCountEl = document.getElementById('cartCount');
+    const cartTotalEl = document.getElementById('cartTotal');
+    const cartDrawer = document.getElementById('cartDrawer');
+    const drawerBackdrop = document.getElementById('drawerBackdrop');
+    const toast = document.getElementById('toast');
+    const checkoutForm = document.getElementById('checkoutForm');
+
+    function renderProducts() {
+      productsTrack.innerHTML = products.map(product => `
+        <article class="card">
+          <div class="card-image">
+            <img src="${product.image}" alt="${product.name}" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <div class="card-title-row">
+              <h4>${product.name}</h4>
+              <div class="price">₹${product.price}</div>
+            </div>
+            <p>${product.description}</p>
+            <button class="btn" type="button" onclick="addToCart(${product.id})">Add to Cart</button>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    function addToCart(productId) {
+      const product = products.find(p => p.id === productId);
+      const existing = cart.find(item => item.id === productId);
+
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ ...product, qty: 1 });
+      }
+
+      updateCartUI();
+      showToast(`${product.name} added to cart`);
+    }
+
+    function updateQty(productId, change) {
+      const item = cart.find(p => p.id === productId);
+      if (!item) return;
+      item.qty += change;
+      if (item.qty <= 0) {
+        removeFromCart(productId);
+        return;
+      }
+      updateCartUI();
+    }
+
+    function removeFromCart(productId) {
+      const index = cart.findIndex(item => item.id === productId);
+      if (index > -1) {
+        const removed = cart[index];
+        cart.splice(index, 1);
+        updateCartUI();
+        showToast(`${removed.name} removed from cart`);
+      }
+    }
+
+    function updateCartUI() {
+      const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
+      const totalAmount = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+
+      cartCountEl.textContent = totalItems;
+      cartTotalEl.textContent = `₹${totalAmount}`;
+
+      if (!cart.length) {
+        cartItemsEl.innerHTML = `
+          <div class="cart-empty">
+            <p style="margin:0 0 6px;"><strong>Your cart is empty</strong></p>
+            <p style="margin:0;">Add products to continue with your order.</p>
+          </div>
+        `;
+        return;
+      }
+
+      cartItemsEl.innerHTML = cart.map(item => `
+        <div class="cart-item">
+          <div class="cart-thumb">
+            <img src="${item.image}" alt="${item.name}" />
+          </div>
+          <div>
+            <h5>${item.name}</h5>
+            <p>₹${item.price} each</p>
+            <div class="qty-row">
+              <button class="qty-btn" type="button" onclick="updateQty(${item.id}, -1)">−</button>
+              <span><strong>${item.qty}</strong></span>
+              <button class="qty-btn" type="button" onclick="updateQty(${item.id}, 1)">+</button>
+            </div>
+          </div>
+          <div style="display:flex; flex-direction:column; align-items:end; justify-content:space-between; gap:8px;">
+            <strong>₹${item.qty * item.price}</strong>
+            <button class="remove-btn" type="button" onclick="removeFromCart(${item.id})">Remove</button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function openCart() {
+      cartDrawer.classList.add('open');
+      drawerBackdrop.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeCart() {
+      cartDrawer.classList.remove('open');
+      drawerBackdrop.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function showToast(message) {
+      toast.textContent = message;
+      toast.classList.add('show');
+      clearTimeout(window.toastTimer);
+      window.toastTimer = setTimeout(() => toast.classList.remove('show'), 1800);
+    }
+
+    document.getElementById('cartFab').addEventListener('click', openCart);
+    document.getElementById('heroCartBtn').addEventListener('click', openCart);
+    document.getElementById('closeCartBtn').addEventListener('click', closeCart);
+    drawerBackdrop.addEventListener('click', closeCart);
+
+    document.getElementById('goToCheckoutBtn').addEventListener('click', () => {
+      closeCart();
+      document.getElementById('order-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    checkoutForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      if (!cart.length) {
+        showToast('Please add at least one item to the cart');
+        openCart();
+        return;
+      }
+
+      const name = document.getElementById('customerName').value.trim();
+      const phone = document.getElementById('customerPhone').value.trim();
+      const notes = document.getElementById('customerNotes').value.trim();
+
+      const itemLines = cart.map(item => `- ${item.name} × ${item.qty} = ₹${item.qty * item.price}`).join('%0D%0A');
+      const total = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+
+      const subject = encodeURIComponent(`New Cart Order from ${name}`);
+      const body = encodeURIComponent(
+        `Customer Name: ${name}\n` +
+        `Phone Number: ${phone}\n` +
+        (notes ? `Address / Notes: ${notes}\n` : '') +
+        `\nOrdered Items:\n${cart.map(item => `- ${item.name} x ${item.qty} = ₹${item.qty * item.price}`).join('\n')}` +
+        `\n\nTotal: ₹${total}`
+      );
+
+      window.location.href = `mailto:ukaranderohit@gmail.com?subject=${subject}&body=${body}`;
+    });
+
+    let autoSlideIndex = 0;
+    function autoSlideCarousel() {
+      if (window.innerWidth < 640) return;
+      const cards = productsTrack.querySelectorAll('.card');
+      if (!cards.length) return;
+      autoSlideIndex = (autoSlideIndex + 1) % cards.length;
+      cards[autoSlideIndex].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+    }
+
+    renderProducts();
+    updateCartUI();
+    document.getElementById('year').textContent = new Date().getFullYear();
+    setInterval(autoSlideCarousel, 3200);
+
+    window.addToCart = addToCart;
+    window.updateQty = updateQty;
+    window.removeFromCart = removeFromCart;
+  </script>
 </body>
 </html>
